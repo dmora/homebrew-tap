@@ -17,22 +17,22 @@ cask "crucible" do
   on_macos do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "75bb0cb69e2cc5fedf54470c5cf9223a04b655f0c84efc6fbfd2169f9aac2806"
+      sha256 "ccc2bab9950027cd23a9eb820bc53b74ec67757b343a8efcbcc2ac08d64e7a07"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_arm64.tar.gz"
-      sha256 "c61ec583c0d9f18b5cae8f3d1728272c8888cc21c8c5977ec371482077b7fb79"
+      sha256 "ad1fd8f2b46c382234ebfe48494bbbc4c60237c84b4a55b6f6b936408027a20f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_x86_64.tar.gz"
-      sha256 "001622b5b1cfb547ad4a9e13cf12ea17bcd7b8929073801e35e92243ac569d4f"
+      sha256 "e4114951950331053fa1e011c362f0663a77b074eba9af6a419d95423d61e86b"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_arm64.tar.gz"
-      sha256 "843db8454a7a88a1f5c563ab029d3e1f9791665f1a7761ce40be916d47957576"
+      sha256 "6ff6210e9a78c0e636f6e180f024df37d3d4bcdbec2f665d5bcf4c4cefa1c44d"
     end
   end
 
