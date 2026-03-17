@@ -3,7 +3,7 @@ cask "crucible" do
   name "crucible"
   desc "Autonomous software development orchestrator"
   homepage "https://github.com/dmora/crucible"
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "crucible" do
   on_macos do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "ac2476ba2de2832e5a5afb32bb325e211352e9b7acef029c645a9ce0a74b1726"
+      sha256 "3fc4a10ceb1d4b24090156c51fbe471e422f3e8637a3e9fc5f2ea1b79a83f262"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_arm64.tar.gz"
-      sha256 "6ddd751cf579625c0d11aaf888989937748f453d37e8fe60105bea890d1b6840"
+      sha256 "fed11452095a87f8d0f9c57b627a3593c21f7636a462993087269baf2b509f14"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_x86_64.tar.gz"
-      sha256 "d7458922fc384f38af8ab82fabf15bd26630c84835f6745dff21dccbefe22522"
+      sha256 "1ea4f38f75bf821ce6d086b7d834c86841bba3bf261f7b4916d35f99043abd8e"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_arm64.tar.gz"
-      sha256 "251ab5ac5b2eaaeab2c8a1e4f3820123bce0457e5948ccff3bae37a49ffbe9f6"
+      sha256 "a3d6684358b5c567815e50732777be1dbd07ab5687df656d78fe84f72530cb80"
     end
   end
 
