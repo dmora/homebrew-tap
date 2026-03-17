@@ -17,23 +17,31 @@ cask "crucible" do
   on_macos do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "ccc2bab9950027cd23a9eb820bc53b74ec67757b343a8efcbcc2ac08d64e7a07"
+      sha256 "e71568ba88bd4af7c805b5cd94171bc3be1cfcac64a06f6a9a0aca4b98cd1a95"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Darwin_arm64.tar.gz"
-      sha256 "ad1fd8f2b46c382234ebfe48494bbbc4c60237c84b4a55b6f6b936408027a20f"
+      sha256 "817bbe11b2d3cd2fb67716f50865f01a98da3a6ad61b4e49c212eea63ee12b7c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_x86_64.tar.gz"
-      sha256 "e4114951950331053fa1e011c362f0663a77b074eba9af6a419d95423d61e86b"
+      sha256 "4fa5c6cbad7eb261121ef1edb02f3edda346d60911167592a95786540a35fb3b"
     end
     on_arm do
       url "https://github.com/dmora/crucible/releases/download/v#{version}/crucible_#{version}_Linux_arm64.tar.gz"
-      sha256 "6ff6210e9a78c0e636f6e180f024df37d3d4bcdbec2f665d5bcf4c4cefa1c44d"
+      sha256 "9a1c062effd176715dab6321a9a17eb8104de977f0ab99cff13e60ce45a12ea6"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/crucible"]
+  end
+
+  caveats do
+    "If macOS blocks the binary, run: xattr -d com.apple.quarantine $(which crucible)"
   end
 
   # No zap stanza required
